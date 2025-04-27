@@ -1,9 +1,15 @@
-{% if latest_question_list %}
+<html>
+<head>
+    <title>Index</title>
+</head>
+<body>
+    <h1>Recent Questions</h1>
     <ul>
-    {% for question in latest_question_list %}
-        <li><a href="{% url 'polls:detail' question.id %}">{{ question.question_text }}</a></li>
-    {% endfor %}
+        {% for question in latest_question_list %}
+            <li>{{ question.question_text }}</li>
+        {% empty %}
+            <li>No questions are available.</li>
+        {% endfor %}
     </ul>
-{% else %}
-    <p>Nie ma dostępnych pytań.</p>
-{% endif %}
+</body>
+</html>
