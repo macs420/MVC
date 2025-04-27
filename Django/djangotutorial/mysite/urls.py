@@ -1,9 +1,9 @@
 from django.contrib import admin
 from django.urls import path, include
-from polls import views
 
 urlpatterns = [
-    path('', views.home, name='home'),
-    path('polls/', include('polls.urls')),  
-    path('admin/', admin.site.urls),  
+    path('admin/', admin.site.urls),
+    path('polls/', include('polls.urls')),  # Ścieżka dla aplikacji polls
+    path('', include('polls.urls')),  # Dodaj to, jeśli chcesz, aby "/polls/" była także stroną główną
 ]
+
