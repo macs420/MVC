@@ -2,6 +2,10 @@
 
 <h1>Movies</h1>
 
+<p>
+    <a asp-action="Create" class="btn btn-success">Create New</a>
+</p>
+
 <table class="table">
     <thead>
         <tr>
@@ -9,6 +13,7 @@
             <th>Release Date</th>
             <th>Genre</th>
             <th>Price</th>
+            <th></th> 
         </tr>
     </thead>
     <tbody>
@@ -19,6 +24,10 @@
             <td>@movie.ReleaseDate.ToShortDateString()</td>
             <td>@movie.Genre</td>
             <td>@movie.Price.ToString("C")</td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@movie.Id">Edit</a> |
+                <a asp-action="Delete" asp-route-id="@movie.Id">Delete</a>
+            </td>
         </tr>
     }
     </tbody>
