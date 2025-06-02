@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Gwiezdne wojny: część I – Mroczne widmo",
+    "director": "George Lucas",
+    "rating": "7"
+  },
+  {
+    "title": "Gwiezdne wojny: część II – Atak klonów",
+    "director": "George Lucas",
+    "rating": "7"
+  },
+  {
+    "title": "Gwiezdne wojny: część III – Zemsta Sithów",
+    "director": "George Lucas",
+    "rating": "10"
+  },
+  {
+    "title": "Gwiezdne wojny: część IV – Nowa nadzieja",
+    "director": "George Lucas",
+    "rating": "9"
+  },
+  {
+    "title": "Gwiezdne wojny: część V – Imperium kontratakuje",
+    "director": "Irvin Kershner",
+    "rating": "10"
+  },
+  {
+    "title": "Gwiezdne wojny: część VI – Powrót Jedi",
+    "director": "Richard Marquand",
+    "rating": "8"
+  }
+]

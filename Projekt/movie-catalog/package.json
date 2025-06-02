@@ -1,0 +1,17 @@
+{
+  "name": "movie-catalog",
+  "version": "1.0.0",
+  "description": "Aplikacja do katalogowania filmów stworzona w Node.js z użyciem wzorca MVC.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "keywords": ["movies", "catalog", "mvc", "nodejs", "express"],
+  "author": "Twoje Imię",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^2.2.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Lista filmów</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1>Lista filmów</h1>
+  <a href="/add" class="button">+ Dodaj nowy film</a>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Tytuł</th>
+        <th>Reżyser</th>
+        <th>Ocena</th>
+        <th>Akcje</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% movies.forEach((movie, i) => { %>
+        <tr>
+          <td><%= movie.title %></td>
+          <td><%= movie.director %></td>
+          <td><%= movie.rating %></td>
+          <td>
+            <a href="/edit/<%= i %>">Edytuj</a>
+            <form action="/delete/<%= i %>" method="POST" style="display:inline;">
+              <button type="submit">Usuń</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</body>
+</html>

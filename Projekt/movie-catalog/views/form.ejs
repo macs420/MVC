@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title><%= movie ? "Edytuj film" : "Dodaj film" %></title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <h1><%= movie ? "Edytuj film" : "Dodaj film" %></h1>
+
+  <form action="<%= movie ? '/edit/' + id : '/add' %>" method="POST">
+    <label>
+      Tytuł:
+      <input type="text" name="title" value="<%= movie ? movie.title : '' %>" required>
+    </label><br>
+
+    <label>
+      Reżyser:
+      <input type="text" name="director" value="<%= movie ? movie.director : '' %>" required>
+    </label><br>
+
+    <label>
+      Ocena:
+      <input type="number" name="rating" min="1" max="10" value="<%= movie ? movie.rating : '' %>" required>
+    </label><br>
+
+    <button type="submit">Zapisz</button>
+    <a href="/">Anuluj</a>
+  </form>
+</body>
+</html>
